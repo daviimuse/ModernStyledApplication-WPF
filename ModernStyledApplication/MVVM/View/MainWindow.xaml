@@ -44,10 +44,19 @@
                             HorizontalAlignment="Right"
                             Margin="0,0,4,0">
                     <Button Content="−"
+                            Foreground="LightGray"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
                             Command="{Binding MinimizeWindowCommand}"/>
                     <Button Content="🗖"
+                            Foreground="LightGray"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
                             Command="{Binding MaximizeWindowCommand}"/>
                     <Button Content="🗙"
+                            Foreground="LightGray"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
                             Command="{Binding ShutdownWindowCommand}"/>
                 </StackPanel>                
             </Grid>
@@ -93,27 +102,28 @@
                              FontWeight="Normal"
                              Foreground="LightGray"
                              FontFamily="Consolas"
-                             IsChecked="True"/>
+                             IsChecked="True"
+                             Command="{Binding ShowHomeView}"/>
+
+                <RadioButton Content="User"
+                             FontSize="16"
+                             FontWeight="Normal"
+                             Foreground="LightGray"
+                             FontFamily="Consolas"
+                             IsChecked="False"
+                             Command="{Binding ShowUserView}"/>
 
                 <RadioButton Content="Settings"
                              FontSize="16"
                              FontWeight="Normal"
                              Foreground="LightGray"
                              FontFamily="Consolas"
-                             IsChecked="False"/>
-
-                <RadioButton Content="Exit"
-                             FontSize="16"
-                             Margin="0,355,0,0"
-                             FontWeight="Normal"
-                             Foreground="LightGray"
-                             VerticalAlignment="Bottom"
-                             FontFamily="Consolas"
-                             IsChecked="False"/>
+                             IsChecked="False"
+                             Command="{Binding ShowSettingsView}"/>
             </StackPanel>
         </Border>
 
-        <ContentPresenter/>
+        <ContentPresenter Content="{Binding CurrentView}"/>
 
     </DockPanel>
 </Window>
