@@ -44,19 +44,13 @@
                             HorizontalAlignment="Right"
                             Margin="0,0,4,0">
                     <Button Content="−"
-                            Foreground="LightGray"
-                            Background="Transparent"
-                            BorderBrush="Transparent"
+                            Padding="0,0,0,2"
                             Command="{Binding MinimizeWindowCommand}"/>
                     <Button Content="🗖"
-                            Foreground="LightGray"
-                            Background="Transparent"
-                            BorderBrush="Transparent"
+                            Padding="0,0,0,3"
                             Command="{Binding MaximizeWindowCommand}"/>
                     <Button Content="🗙"
-                            Foreground="LightGray"
-                            Background="Transparent"
-                            BorderBrush="Transparent"
+                            Padding="0,0,0,2"
                             Command="{Binding ShutdownWindowCommand}"/>
                 </StackPanel>                
             </Grid>
