@@ -9,6 +9,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Themes/TitlebarButtons.xaml"/>
+                <ResourceDictionary Source="/Themes/MenuButtons.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type vms:HomeViewModel}">

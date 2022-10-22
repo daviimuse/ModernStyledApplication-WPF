@@ -3,7 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ModernVPN" xmlns:viewmodel="clr-namespace:ModernStyledApplication.MVVM.ViewModel"
+        xmlns:local="clr-namespace:ModernVPN"
+        xmlns:viewmodel="clr-namespace:ModernStyledApplication.MVVM.ViewModel"
+        xmlns:extensions="clr-namespace:ModernStyledApplication.Core"
         mc:Ignorable="d"
         Title="MainWindow" 
         Height="450" Width="800"
@@ -68,7 +70,7 @@
                                 <BeginStoryboard>
                                     <Storyboard>
                                         <DoubleAnimation Storyboard.TargetProperty="(Border.Width)"
-                                                         To="120"
+                                                         To="130"
                                                          Duration="0:0:.1"/>
                                     </Storyboard>
                                 </BeginStoryboard>
@@ -92,7 +94,9 @@
 
             <StackPanel>
                 <RadioButton Content="Home"
+                             extensions:Extensions.Icon="🏠"
                              FontSize="16"
+                             Padding="7.6,3.5,8,8"
                              FontWeight="Normal"
                              Foreground="LightGray"
                              FontFamily="Consolas"
@@ -100,7 +104,9 @@
                              Command="{Binding ShowHomeView}"/>
 
                 <RadioButton Content="User"
+                             extensions:Extensions.Icon="👤"
                              FontSize="16"
+                             Padding="7.6,3.5,8,8"
                              FontWeight="Normal"
                              Foreground="LightGray"
                              FontFamily="Consolas"
@@ -108,7 +114,9 @@
                              Command="{Binding ShowUserView}"/>
 
                 <RadioButton Content="Settings"
+                             extensions:Extensions.Icon="⚙"
                              FontSize="16"
+                             Padding="7.6,3.5,8,8"
                              FontWeight="Normal"
                              Foreground="LightGray"
                              FontFamily="Consolas"
